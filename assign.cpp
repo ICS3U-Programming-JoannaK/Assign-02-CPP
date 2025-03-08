@@ -10,11 +10,7 @@
 #include <iomanip>
 #include <iostream>
 
-#ifdef _WIN32
-#include <windows.h>
-#endif
-
-void setColor(int color) {
+int setColor(int color) {
 #ifdef _WIN32
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
 #else
