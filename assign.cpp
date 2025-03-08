@@ -6,8 +6,8 @@
 // and minor radius of a Torus then calculates
 // the surface area and volume using PI
 
-// modules used for this program 
-#include <cmath> 
+// modules used for this program
+#include <cmath>
 #include <iomanip>
 #include <iostream>
 #include <string>
@@ -15,7 +15,7 @@
 // This displays the greeting card in color
 void color() {
     std::cout << "\033[1;35m";  // the greeting card will be purple !
-    
+
     // Display greeting card
     std::cout << "************************************" << std::endl;
     std::cout << "*                                  *" << std::endl;
@@ -25,10 +25,10 @@ void color() {
 
     // Reset to default color
     std::cout << "\033[0m";
-} 
+}
 
 int main() {
-    //Display greeting card in color
+    // Display greeting card in color
     color();
 
     // Declare variables
@@ -42,16 +42,18 @@ int main() {
         std::cout << "Please enter the minor radius (r): ";
         std::cin >> minorRadius;
 
-        // This makes sure the program won't run if the minor radius is greater than the major radius
+        // This makes sure the program won't run
+        // if the minor radius is greater than the major radius
         if (majorRadius > minorRadius) {
             break;  // the program won't go further if conditions aren't met
         } else {
-            std::cout << "The major radius must be greater than the minor radius." << std::endl;
-            std::cout << "Please input new digits." << std::endl;
+        std::cout << "The major radius must be"
+        << "greater than minor radius." << std::endl;
+        std::cout << "Please input new digits." << std::endl;
         }
     }
 
-    // Get units from the user 
+    // Get units from the user
     std::cout << "Please enter the units (e.g., cm, m): ";
     std::cin >> units;
 
@@ -61,10 +63,13 @@ int main() {
 
     // Set the output to 2 decimal places
     std::cout << std::fixed << std::setprecision(2);
-    std::cout << "The volume of the torus is: " << volume << " " << units << "^3" << std::endl;
-    std::cout << "The surface area of the torus is: " << area << " " << units << "^2" << std::endl;
+    std::cout << "The volume of the torus is: "
+    << volume << " " << units << "^3" << std::endl;
+    std::cout << "The surface area of the torus is: "
+    << area << " " << units << "^2" << std::endl;
 
-    // The user is able to see what formulas were used to calculate the area and volume
+    // The user is able to see what formulas
+    // were used to calculate the area and volume
     std::string showFormulas;
     std::cout << "Do you want to see the formulas used? (yes/no): ";
     std::cin >> showFormulas;
@@ -74,7 +79,8 @@ int main() {
         std::cout << "Volume formula= 2π²Rr²" << std::endl;
         std::cout << "Area formula= 4π²Rr" << std::endl;
     } else {
-        std::cout << "Alright, no codes will be shown." << std::endl; // This will display when the user types no
+        std::cout << "Alright, no codes will be shown." << std::endl;
+        // This will display when the user types no
     }
 
     // Ask the user if they want to know more about the Torus shape
@@ -86,26 +92,30 @@ int main() {
     if (displayInfo == "yes") {
         std::cout << "------More on the Torus shape------\n"
                   << std::endl;
-        std::cout << "A Torus is a 3D shape that resembles a donut. It has two radius:\n"
+        std::cout << "A Torus is a 3D shape that resembles"
+        << "a donut. It has two radius:\n"
                   << std::endl;
-        std::cout << "1. Major Radius (R): This is the distance from the center of hole to the center of the tube\n"
+        std::cout << "1. Major Radius (R): This is the distance from"
+        << "the center of hole to the center of the tube\n"
                   << std::endl;
         std::cout << "Minor radius (r): This is the radius of the tube itself"
                   << std::endl;
-        std::cout << "the distance from the center of the tube to the surface of the Torus"
+        std::cout << "the distance from the center of the"
+        << "tube to the surface of the Torus"
                   << std::endl;
         std::cout << "Minor radius (r): This is the radius of the tube itself,"
                   << std::endl;
-        std::cout << "the distance from the center of the tube to the surface of the Torus\n"
+        std::cout << "the distance from the center of"
+        << "the tube to the surface of the Torus\n"
                   << std::endl;
         std::cout << "Thank you for using the Torus calculator ! Goodbye!\n"
                   << std::endl;
 
     } else {  // Only displays exit card if user types no
-        std::cout << "********************************************" << std::endl;
-        std::cout << "*                                          *" << std::endl;
-        std::cout << "* Thank you for using the Torus Calculator!*" << std::endl;
-        std::cout << "*                                          *" << std::endl;
-        std::cout << "********************************************" << std::endl;
+        std::cout << "**********************8***************" << std::endl;
+        std::cout << "*                                    *" << std::endl;
+        std::cout << "* Thank you for using the calculator!*" << std::endl;
+        std::cout << "*                                    *" << std::endl;
+        std::cout << "**************************************" << std::endl;
     }
 }
