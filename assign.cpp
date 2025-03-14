@@ -25,6 +25,8 @@ int color() {
 
     // Reset to default color
     std::cout << "\033[0m";
+
+    return 0;
 }
 
 int main() {
