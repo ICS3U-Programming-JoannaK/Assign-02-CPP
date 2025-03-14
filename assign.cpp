@@ -13,7 +13,7 @@
 #include <string>
 
 // This displays the greeting card in color
-void color() {
+int color() {
     std::cout << "\033[1;35m";  // the greeting card will be purple !
 
     // Display greeting card
@@ -47,9 +47,9 @@ int main() {
         if (majorRadius > minorRadius) {
             break;  // the program won't go further if conditions aren't met
         } else {
-        std::cout << "The major radius must be"
-        << "greater than minor radius." << std::endl;
-        std::cout << "Please input new digits." << std::endl;
+            std::cout << "The major radius must be "
+                      << "greater than minor radius." << std::endl;
+            std::cout << "Please input new digits." << std::endl;
         }
     }
 
@@ -64,9 +64,9 @@ int main() {
     // Set the output to 2 decimal places
     std::cout << std::fixed << std::setprecision(2);
     std::cout << "The volume of the torus is: "
-    << volume << " " << units << "^3" << std::endl;
+              << volume << " " << units << "^3" << std::endl;
     std::cout << "The surface area of the torus is: "
-    << area << " " << units << "^2" << std::endl;
+              << area << " " << units << "^2" << std::endl;
 
     // The user is able to see what formulas
     // were used to calculate the area and volume
@@ -93,20 +93,20 @@ int main() {
         std::cout << "------More on the Torus shape------\n"
                   << std::endl;
         std::cout << "A Torus is a 3D shape that resembles"
-        << "a donut. It has two radius:\n"
+                  << "a donut. It has two radius:\n"
                   << std::endl;
         std::cout << "1. Major Radius (R): This is the distance from"
-        << "the center of hole to the center of the tube\n"
+                  << "the center of hole to the center of the tube\n"
                   << std::endl;
         std::cout << "Minor radius (r): This is the radius of the tube itself"
                   << std::endl;
         std::cout << "the distance from the center of the"
-        << "tube to the surface of the Torus"
+                  << "tube to the surface of the Torus"
                   << std::endl;
         std::cout << "Minor radius (r): This is the radius of the tube itself,"
                   << std::endl;
         std::cout << "the distance from the center of"
-        << "the tube to the surface of the Torus\n"
+                  << "the tube to the surface of the Torus\n"
                   << std::endl;
         std::cout << "Thank you for using the Torus calculator ! Goodbye!\n"
                   << std::endl;
