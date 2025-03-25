@@ -37,13 +37,11 @@ int main() {
     std::string units;
 
     // Ask user to enter the major and minor radius
+    std::cout << "Please make sure your major radius is larger than minor radius." << std::endl;
     std::cout << "Please enter the major radius (R): ";
     std::cin >> majorRadius;
     std::cout << "Please enter the minor radius (r): ";
     std::cin >> minorRadius;
-
-    // Display pointer for future references
-    std::cout << "Make sure next time your major radius is larger than minor radius." << std::endl;
 
     // Get units from the user
     std::cout << "Please enter the units (e.g., cm, m): ";
