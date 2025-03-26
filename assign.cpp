@@ -10,9 +10,10 @@
 #include <cmath>
 #include <iomanip>
 #include <iostream>
+#include <string>
 
-// This displays the greeting card in color
-int color() {
+int main() {
+    // Display greeting card in color
     std::cout << "\033[1;35m";  // the greeting card will be purple !
 
     // Display greeting card
@@ -25,19 +26,13 @@ int color() {
     // Reset to default color
     std::cout << "\033[0m";
 
-    return 0;
-}
-
-int main() {
-    // Display greeting card in color
-    color();
-
     // Declare variables
     float majorRadius, minorRadius;
     std::string units;
 
     // Ask user to enter the major and minor radius
-    std::cout << "Please make sure your major radius is larger than minor radius." << std::endl;
+    std::cout << "Please make sure your major radius "
+    "is larger than minor radius." << std::endl;
     std::cout << "Please enter the major radius (R): ";
     std::cin >> majorRadius;
     std::cout << "Please enter the minor radius (r): ";
